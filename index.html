@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#170f2a">
+<title>Маленька пригода для тебе ✨</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+  :root{--bg:#130e23;--panel:rgba(255,255,255,.075);--line:rgba(255,255,255,.14);--text:#fff8fb;--muted:#c4b8d3;--pink:#ff8db7;--rose:#ff5d9e;--gold:#ffdca0;--lilac:#b8a1ff;--green:#9de7ce;--shadow:0 24px 80px rgba(0,0,0,.32)}
+  *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;min-height:100vh;color:var(--text);font-family:'DM Sans',system-ui,sans-serif;background:radial-gradient(ellipse at 15% 5%,rgba(133,76,179,.27),transparent 42%),radial-gradient(ellipse at 90% 35%,rgba(255,93,158,.14),transparent 38%),linear-gradient(145deg,#100b1e,#1a102b 55%,#100c20);overflow-x:hidden}
+  body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.15;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");z-index:-1}
+  .aurora{position:fixed;width:440px;height:440px;border-radius:50%;filter:blur(95px);opacity:.16;pointer-events:none;z-index:-1;animation:drift 15s ease-in-out infinite alternate}.a1{background:#a266f5;top:-190px;left:-100px}.a2{background:#ff639e;bottom:-250px;right:-100px;animation-delay:-5s}@keyframes drift{to{transform:translate(50px,40px) scale(1.18)}}
+  .wrap{width:min(1060px,calc(100% - 34px));margin:0 auto;padding:22px 0 52px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:36px}.brand{display:flex;align-items:center;gap:10px;color:#f9edf9;font-size:13px;letter-spacing:.13em;text-transform:uppercase;font-weight:700}.brandmark{width:35px;height:35px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.18);border-radius:12px;background:linear-gradient(140deg,rgba(255,141,183,.24),rgba(184,161,255,.18));font-size:18px}.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:rgba(255,255,255,.045);padding:9px 13px;border-radius:100px;color:var(--muted);font-size:12px}.live-dot{height:7px;width:7px;background:var(--green);border-radius:50%;box-shadow:0 0 12px var(--green)}
+  main{position:relative}.view{display:none;animation:arrive .55s cubic-bezier(.2,.8,.2,1)}.view.active{display:block}@keyframes arrive{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+  .hero{text-align:center;padding:clamp(30px,7vw,76px) 0 50px;position:relative}.eyebrow{color:var(--gold);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;display:flex;align-items:center;justify-content:center;gap:12px}.eyebrow:before,.eyebrow:after{content:"";display:block;width:28px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}.eyebrow:after{transform:rotate(180deg)}h1,h2,h3,p{margin-top:0}.hero h1{font:600 clamp(42px,8vw,80px)/1.04 'Playfair Display',Georgia,serif;letter-spacing:-.04em;margin:24px auto 20px;max-width:820px}.gradient-text{background:linear-gradient(100deg,#fff7fa 4%,#ff9ebf 45%,#d5c3ff 95%);color:transparent;background-clip:text;-webkit-background-clip:text}.lead{max-width:590px;margin:0 auto;color:var(--muted);font-size:clamp(15px,2vw,18px);line-height:1.8}.hero-art{height:124px;display:flex;align-items:center;justify-content:center;margin:30px 0 16px;position:relative}.orbit{width:108px;height:108px;border:1px solid rgba(255,205,226,.32);border-radius:50%;display:grid;place-items:center;position:relative;box-shadow:0 0 65px rgba(255,93,158,.12),inset 0 0 30px rgba(255,141,183,.06)}.orbit:before,.orbit:after{content:"";position:absolute;inset:-11px;border:1px solid rgba(184,161,255,.2);border-radius:50%;animation:spin 16s linear infinite}.orbit:after{inset:-22px;border-color:rgba(255,220,160,.13);animation-direction:reverse;animation-duration:23s}@keyframes spin{to{transform:rotate(360deg)}}.big-heart{font-size:48px;filter:drop-shadow(0 0 18px rgba(255,93,158,.5));animation:heartbeat 2s ease-in-out infinite}@keyframes heartbeat{0%,100%{transform:scale(1)}8%{transform:scale(1.11)}16%{transform:scale(1)}24%{transform:scale(1.07)}32%{transform:scale(1)}}.tiny-star{position:absolute;color:var(--gold);font-size:20px;animation:twinkle 2.4s ease-in-out infinite}.s1{left:calc(50% - 105px);top:15px}.s2{left:calc(50% + 85px);top:24px;animation-delay:.8s}.s3{left:calc(50% + 110px);bottom:6px;font-size:13px;animation-delay:1.4s}@keyframes twinkle{50%{opacity:.3;transform:scale(.7) rotate(25deg)}}
+  .cta{border:0;cursor:pointer;color:#241027;background:linear-gradient(110deg,#ffd2df,#ff8db7 55%,#c9b8ff);padding:15px 24px;border-radius:15px;font:700 15px 'DM Sans',sans-serif;box-shadow:0 10px 34px rgba(255,93,158,.2);transition:transform .2s,filter .2s;display:inline-flex;align-items:center;justify-content:center;gap:11px}.cta:hover{transform:translateY(-2px);filter:brightness(1.06)}.cta:active{transform:translateY(0)}.cta:focus-visible,.choice:focus-visible,.star-heart:focus-visible{outline:3px solid white;outline-offset:4px}.secondary{border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--text);padding:12px 17px;border-radius:13px;font:600 13px 'DM Sans',sans-serif;cursor:pointer;transition:background .2s}.secondary:hover{background:rgba(255,255,255,.09)}.hero-note{color:#988ba9;font-size:12px;margin:16px 0 0}
+  .section-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:42px;text-align:left}.mini-card{border:1px solid var(--line);background:linear-gradient(150deg,rgba(255,255,255,.075),rgba(255,255,255,.025));border-radius:20px;padding:19px}.mini-icon{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:rgba(255,141,183,.12);margin-bottom:15px;font-size:19px}.mini-card h3{font-size:14px;margin-bottom:8px}.mini-card p{font-size:12px;line-height:1.65;color:var(--muted);margin:0}
+  .quest-layout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:18px;align-items:start}.quest-side,.quest-panel{border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025));border-radius:24px;box-shadow:var(--shadow)}.quest-side{padding:23px;position:sticky;top:20px}.side-label{color:var(--gold);font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;margin-bottom:10px}.quest-side h2{font:600 27px/1.15 'Playfair Display',Georgia,serif;margin-bottom:22px}.progress-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:9px}.progress-track{height:5px;border-radius:20px;background:rgba(255,255,255,.09);overflow:hidden}.progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--rose),var(--lilac));border-radius:20px;transition:width .45s}.step-list{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:16px}.step-list li{display:flex;gap:12px;align-items:center;color:#8f829f;font-size:12px}.step-num{height:29px;width:29px;flex:0 0 29px;border:1px solid var(--line);border-radius:10px;display:grid;place-items:center;font-size:11px}.step-list li.current{color:var(--text)}.step-list li.current .step-num{background:rgba(255,141,183,.15);border-color:rgba(255,141,183,.52);color:#ffc5d9}.step-list li.done .step-num{background:rgba(157,231,206,.13);border-color:rgba(157,231,206,.3);color:var(--green)}.side-bottom{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);font-size:11px;line-height:1.7;color:#9487a6}
+  .quest-panel{min-height:455px;padding:clamp(22px,4vw,39px)}.step-kicker{color:var(--pink);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}.quest-panel h2{font:600 clamp(27px,4vw,38px)/1.15 'Playfair Display',Georgia,serif;letter-spacing:-.02em;margin-bottom:13px}.subtext{color:var(--muted);font-size:14px;line-height:1.8;margin-bottom:26px}.heart-field{min-height:160px;border:1px solid rgba(255,255,255,.1);border-radius:20px;background:radial-gradient(ellipse at center,rgba(255,93,158,.08),rgba(255,255,255,.02));position:relative;overflow:hidden;margin-bottom:18px}.star-heart{position:absolute;display:grid;place-items:center;width:43px;height:43px;border:1px solid rgba(255,141,183,.3);border-radius:15px;background:rgba(255,141,183,.1);font-size:21px;cursor:pointer;transition:transform .2s,opacity .2s,background .2s;animation:bob 3.4s ease-in-out infinite}.star-heart:hover{transform:scale(1.14) rotate(-5deg);background:rgba(255,141,183,.2)}.star-heart.found{opacity:.34;filter:grayscale(1);pointer-events:none;animation:none}.star-heart:nth-child(2n){animation-delay:-1.1s}.star-heart:nth-child(3n){animation-delay:-2.2s}@keyframes bob{50%{translate:0 -7px}}.counter-line{display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--muted);font-size:12px}.counter strong{color:var(--text)}.hint{font-size:12px;color:#b6a6c8;margin:18px 0 0;line-height:1.6}.answer-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}.choice{border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.035);color:var(--text);padding:16px;text-align:left;font:600 13px 'DM Sans',sans-serif;cursor:pointer;min-height:64px;transition:border .2s,background .2s,transform .2s}.choice:hover{border-color:rgba(255,141,183,.5);transform:translateY(-2px)}.choice .emoji{margin-right:10px;font-size:19px;vertical-align:middle}.choice.correct{border-color:rgba(157,231,206,.55);background:rgba(157,231,206,.11)}.choice.wrong{border-color:rgba(255,100,132,.6);background:rgba(255,100,132,.08);animation:shake .28s}@keyframes shake{25%{transform:translateX(-3px)}75%{transform:translateX(3px)}}.feedback{min-height:24px;font-size:12px;line-height:1.6;margin:14px 0;color:var(--green)}.riddle-box{padding:21px;border-radius:17px;border:1px solid rgba(255,220,160,.2);background:rgba(255,220,160,.055);font:500 18px/1.65 'Playfair Display',Georgia,serif;color:#fff2d7;margin-bottom:18px}.answer-row{display:flex;gap:10px}.answer-input{min-width:0;flex:1;padding:14px 15px;border:1px solid var(--line);border-radius:13px;background:rgba(9,6,19,.35);color:white;font:14px 'DM Sans',sans-serif;outline:none}.answer-input:focus{border-color:rgba(255,141,183,.7);box-shadow:0 0 0 3px rgba(255,141,183,.08)}.answer-input::placeholder{color:#7f728e}
+  .final-card{text-align:center;padding:clamp(18px,5vw,40px) 0}.final-sparkle{font-size:32px;margin-bottom:12px;display:block;animation:heartbeat 2s infinite}.final-card h2{font:600 clamp(36px,7vw,63px)/1.06 'Playfair Display',Georgia,serif;max-width:700px;margin:0 auto 18px}.final-card .subtext{max-width:580px;margin:0 auto 24px}.video-shell{max-width:790px;width:100%;margin:30px auto 0;padding:10px;border:1px solid rgba(255,255,255,.15);border-radius:24px;background:linear-gradient(135deg,rgba(255,141,183,.12),rgba(184,161,255,.08));box-shadow:0 20px 80px rgba(0,0,0,.4)}video{display:block;width:100%;max-height:65vh;aspect-ratio:16/9;background:#0a0711;border-radius:16px;outline:none}.video-placeholder{min-height:230px;display:grid;place-items:center;padding:28px;text-align:center;border-radius:16px;background:radial-gradient(ellipse at center,rgba(255,93,158,.12),rgba(10,7,17,.95))}.placeholder-icon{font-size:37px;margin-bottom:13px}.video-placeholder h3{font:600 25px 'Playfair Display',Georgia,serif;margin-bottom:9px}.video-placeholder p{font-size:13px;line-height:1.7;color:var(--muted);max-width:400px;margin:0 auto}.video-placeholder code{color:#ffd7e5;background:rgba(255,255,255,.08);padding:3px 6px;border-radius:5px}.under-video{font-size:12px;color:#9588a8;margin:17px auto 0;line-height:1.7}.love-note{max-width:500px;margin:30px auto 0;padding:22px;border-top:1px solid var(--line);color:#cbbdd9;font:italic 17px/1.7 'Playfair Display',Georgia,serif}.footer{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;margin-top:45px;display:flex;align-items:center;justify-content:space-between;gap:12px;color:#847793;font-size:11px}.footer b{font-weight:600;color:#b5a4c8}.toast{position:fixed;left:50%;bottom:25px;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#fff4f9;color:#2c1730;padding:13px 18px;border-radius:13px;font-size:13px;font-weight:600;box-shadow:0 10px 35px #0005;transition:.25s;z-index:10;max-width:calc(100% - 30px);text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}.confetti{position:fixed;top:-20px;z-index:30;pointer-events:none;animation:fall var(--dur,3s) linear forwards;font-size:var(--size,18px)}@keyframes fall{to{transform:translate3d(var(--drift,40px),110vh,0) rotate(700deg);opacity:.1}}.hidden{display:none!important}
+  @media(max-width:760px){.topbar{margin-bottom:13px}.pill{font-size:10px;padding:8px 10px}.quest-layout{grid-template-columns:1fr}.quest-side{position:static;padding:18px}.quest-side h2{font-size:23px;margin-bottom:14px}.step-list{grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px}.step-list li{align-items:flex-start;gap:7px;line-height:1.35}.step-num{height:25px;width:25px;flex-basis:25px;border-radius:8px}.side-bottom{display:none}.quest-panel{min-height:0}.section-grid{grid-template-columns:1fr;gap:9px}.mini-card{display:flex;align-items:center;gap:13px;padding:13px 15px}.mini-icon{margin:0;flex:0 0 38px}.mini-card h3{margin:0 0 4px}.mini-card p{margin:0}.hero{padding-top:40px}.footer{margin-top:29px}.answer-row{flex-direction:column}.answer-row .cta{width:100%}}
+  @media(max-width:430px){.brand{font-size:10px;letter-spacing:.1em}.brandmark{width:31px;height:31px}.hero h1{font-size:43px}.eyebrow{font-size:10px}.answer-grid{grid-template-columns:1fr}.choice{min-height:55px}.quest-panel{padding:21px}.heart-field{min-height:190px}.star-heart{width:39px;height:39px}}
+  /* Mobile polish: comfortable spacing, touch targets, and no sideways scrolling. */
+  @media(max-width:600px){
+    .wrap{width:calc(100% - 28px);padding:max(14px,env(safe-area-inset-top)) 0 calc(28px + env(safe-area-inset-bottom))}
+    .topbar{flex-wrap:wrap;align-items:flex-start;gap:10px;margin-bottom:18px}
+    .brand{min-width:0;font-size:11px;letter-spacing:.08em;gap:8px}
+    .pill{max-width:100%;font-size:10px;padding:8px 10px}
+    .hero{padding:clamp(24px,7vw,40px) 0 32px}
+    .eyebrow{font-size:10px;letter-spacing:.14em;gap:8px}
+    .eyebrow:before,.eyebrow:after{width:20px}
+    .hero h1{font-size:clamp(2.2rem,10.2vw,3rem);line-height:1.06;letter-spacing:-.045em;margin:20px auto 16px}
+    .lead{font-size:15px;line-height:1.7;padding:0 2px}
+    .hero-art{height:108px;margin:24px 0 14px}
+    .orbit{width:88px;height:88px}
+    .big-heart{font-size:41px}
+    .s1{left:calc(50% - 88px)}.s2{left:calc(50% + 72px)}.s3{left:calc(50% + 88px)}
+    .cta{min-height:50px;padding:14px 18px;max-width:100%;touch-action:manipulation}
+    #startBtn{width:100%;max-width:340px}
+    .hero-note{font-size:11px;line-height:1.6;padding:0 8px}
+    .section-grid{margin-top:30px;gap:9px}
+    .mini-card{min-width:0;padding:13px;border-radius:16px;gap:11px}
+    .mini-card>div:last-child{min-width:0}
+    .mini-card h3{font-size:13px;line-height:1.35}
+    .mini-card p{font-size:12px;line-height:1.55;overflow-wrap:anywhere}
+    .quest-layout{grid-template-columns:minmax(0,1fr);gap:12px;min-width:0}
+    .quest-side{min-width:0;padding:16px;border-radius:19px}
+    .quest-side h2{font-size:23px;line-height:1.12;margin-bottom:14px}
+    .progress-meta{gap:8px;font-size:11px}
+    .step-list{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-top:16px}
+    .step-list li{min-width:0;align-items:flex-start;gap:6px;font-size:10px;line-height:1.35}
+    .step-list li>span:last-child{min-width:0;overflow-wrap:anywhere}
+    .step-num{width:24px;height:24px;flex:0 0 24px;font-size:10px}
+    .quest-panel{min-width:0;padding:19px 17px;min-height:0;border-radius:19px;overflow:hidden}
+    .step-kicker{font-size:10px;letter-spacing:.13em;line-height:1.5}
+    .quest-panel h2{font-size:clamp(1.65rem,7vw,2.1rem);line-height:1.14;overflow-wrap:anywhere}
+    .subtext{font-size:14px;line-height:1.7;margin-bottom:20px}
+    .heart-field{min-height:185px;border-radius:16px}
+    .star-heart{width:42px;height:42px;border-radius:14px;touch-action:manipulation}
+    .counter-line{font-size:11px;gap:8px}
+    .hint{font-size:12px;line-height:1.6}
+    .answer-grid{grid-template-columns:minmax(0,1fr);gap:9px}
+    .choice{min-height:56px;padding:14px;border-radius:14px;font-size:13px;line-height:1.5;overflow-wrap:anywhere;touch-action:manipulation}
+    .choice .emoji{margin-right:8px}
+    .riddle-box{font-size:17px;line-height:1.55;padding:17px;border-radius:15px;overflow-wrap:anywhere}
+    .answer-row{flex-direction:column;gap:9px}
+    .answer-input,.answer-row .cta{width:100%;min-height:50px;font-size:16px}
+    .final-card{padding:12px 0 4px}
+    .final-card h2{font-size:clamp(2.1rem,9vw,3rem);line-height:1.08}
+    .video-shell{padding:6px;margin-top:22px;border-radius:18px}
+    video{width:100%;height:auto;max-height:65dvh;aspect-ratio:16/9;border-radius:12px;object-fit:contain}
+    .video-placeholder{min-height:190px;padding:20px 12px;border-radius:12px;overflow-wrap:anywhere}
+    .video-placeholder h3{font-size:clamp(1.35rem,6vw,1.7rem);line-height:1.2}
+    .video-placeholder p{font-size:12px;line-height:1.65;overflow-wrap:anywhere}
+    .video-placeholder code{overflow-wrap:anywhere;white-space:normal}
+    .under-video{font-size:11px;line-height:1.65}
+    .love-note{font-size:16px;line-height:1.65;padding:18px 7px;margin-top:22px;overflow-wrap:anywhere}
+    #restartBtn{min-height:46px;max-width:100%;white-space:normal}
+    .footer{display:grid;gap:7px;line-height:1.5;margin-top:28px;padding-top:16px}
+    .toast{bottom:calc(14px + env(safe-area-inset-bottom));width:max-content;max-width:calc(100% - 24px);padding:12px 14px;line-height:1.45}
+    .aurora{width:280px;height:280px;filter:blur(75px)}
+  }
+  @media(max-width:360px){
+    .wrap{width:calc(100% - 22px)}
+    .brand{font-size:10px;letter-spacing:.06em}
+    .brandmark{width:29px;height:29px;flex:0 0 29px}
+    .hero h1{font-size:clamp(2rem,9.4vw,2.25rem)}
+    .eyebrow{font-size:9px;letter-spacing:.11em}
+    .step-list{gap:5px}
+    .step-list li{font-size:9px;gap:4px}
+    .step-num{width:22px;height:22px;flex-basis:22px}
+    .quest-side{padding:14px}
+    .quest-panel{padding:16px 13px}
+    .star-heart{width:38px;height:38px}
+    .counter-line{font-size:10px}
+  }
+  @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="aurora a1"></div><div class="aurora a2"></div>
+<div class="wrap">
+  <header class="topbar">
+    <div class="brand"><span class="brandmark">✦</span> маленька пригода</div>
+    <div class="pill"><span class="live-dot"></span> створено з любов’ю</div>
+  </header>
+  <main>
+    <section id="welcome" class="view active">
+      <div class="hero">
+        <div class="eyebrow">одна особлива місія</div>
+        <h1>Для тебе є дещо <span class="gradient-text">особливе.</span></h1>
+        <p class="lead">На тебе чекає маленька пригода. Три кроки, кілька секретів і дещо, що було підготовлено саме для тебе. Готова? 💗</p>
+        <div class="hero-art" aria-hidden="true"><span class="tiny-star s1">✧</span><span class="tiny-star s2">✦</span><span class="tiny-star s3">✧</span><div class="orbit"><span class="big-heart">💗</span></div></div>
+        <button class="cta" id="startBtn">Почати пригоду <span aria-hidden="true">↗</span></button>
+        <p class="hero-note">займе всього кілька хвилин · потрібен лише гарний настрій</p>
+        <div class="section-grid">
+          <article class="mini-card"><div class="mini-icon">♡</div><div><h3>Знайди маленькі дива</h3><p>Уважність сьогодні стане в пригоді.</p></div></article>
+          <article class="mini-card"><div class="mini-icon">✧</div><div><h3>Розгадай секрет</h3><p>Тут усе трохи магічне, але чесно.</p></div></article>
+          <article class="mini-card"><div class="mini-icon">🎁</div><div><h3>Відкрий сюрприз</h3><p>Фінал вартий кожної секунди.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="quest" class="view">
+      <div class="quest-layout">
+        <aside class="quest-side">
+          <div class="side-label">твій маршрут</div><h2>Місія<br><span class="gradient-text">«Сюрприз»</span></h2>
+          <div class="progress-meta"><span>Прогрес пригоди</span><strong id="progressText">0 з 3</strong></div><div class="progress-track"><div id="progressFill" class="progress-fill"></div></div>
+          <ol class="step-list" id="stepList"><li class="current"><span class="step-num">01</span><span>Зоряний пошук</span></li><li><span class="step-num">02</span><span>Одне важливе питання</span></li><li><span class="step-num">03</span><span>Останній секрет</span></li></ol>
+          <div class="side-bottom">Маленька підказка: не поспішай. Найкращі сюрпризи відкриваються з усмішкою ✨</div>
+        </aside>
+        <section class="quest-panel" aria-live="polite">
+          <div id="step1" class="step-view">
+            <div class="step-kicker">крок 01 · уважність</div><h2>Збери п'ять сердечок.</h2><p class="subtext">Вони заховалися десь у зоряному пилу. Натисни на кожне сердечко в полі нижче — і рушимо далі.</p>
+            <div class="heart-field" id="heartField" aria-label="Поле пошуку сердечок"></div>
+            <div class="counter-line"><span>Знайдено сердечок</span><span class="counter"><strong id="heartCount">0</strong> / 5</span></div>
+            <p class="hint" id="heartHint">Псс… вони трохи рухаються. Але від тебе не сховаються 💘</p>
+          </div>
+          <div id="step2" class="step-view hidden">
+            <div class="step-kicker">крок 02 · питання з підступом</div><h2>Що робить день народження особливим?</h2><p class="subtext">Подумай добре. Відповідь не обов'язково можна купити в магазині.</p>
+            <div class="answer-grid" id="choices">
+              <button class="choice" data-correct="false"><span class="emoji">🎂</span>Торт на три поверхи</button>
+              <button class="choice" data-correct="true"><span class="emoji">💗</span>Люди, які тебе люблять</button>
+              <button class="choice" data-correct="false"><span class="emoji">🎈</span>Мільйон кульок</button>
+              <button class="choice" data-correct="false"><span class="emoji">💎</span>Подарунок дорожче за все</button>
+            </div>
+            <p class="feedback" id="choiceFeedback" role="status"></p>
+          </div>
+          <div id="step3" class="step-view hidden">
+            <div class="step-kicker">крок 03 · останній секрет</div><h2>Відгадай пароль серця.</h2><p class="subtext">Вона не має ціни, не поміщається в коробку, але робить звичайні миті безцінними.</p>
+            <div class="riddle-box">«Її можна подарувати поглядом, відчути в обіймах і зберігати навіть на відстані. Що це?»</div>
+            <form id="answerForm"><div class="answer-row"><input class="answer-input" id="secretAnswer" type="text" placeholder="Введи секретне слово…" autocomplete="off" aria-label="Секретне слово"><button class="cta" type="submit">Перевірити ↗</button></div></form>
+            <p class="feedback" id="riddleFeedback" role="status"></p><p class="hint">Підказка: це слово часто кажуть не словами, а вчинками.</p>
+          </div>
+          <div id="step4" class="step-view hidden final-card">
+            <span class="final-sparkle">✨ 💗 ✨</span><div class="step-kicker">місію виконано</div><h2>Ти відкрила <span class="gradient-text">найголовніше.</span></h2><p class="subtext">Ця маленька пригода створена спеціально для <strong id="herNameDisplay">тебе</strong>. За дверцятами — дещо особисте, щире й тільки для тебе. Натискай play. 💌</p>
+            <div class="video-shell">
+              <video id="birthdayVideo" controls playsinline preload="metadata" class="hidden" aria-label="Відеопривітання з днем народження">
+                <source src="birthday.mp4" type="video/mp4">
+                Твій браузер не підтримує відтворення цього відео.
+              </video>
+              <div class="video-placeholder" id="videoPlaceholder"><div><div class="placeholder-icon">🎞️</div><h3>Тут живе твоє привітання</h3><p>Поклади файл <code>birthday.mp4</code> поруч із <code>index.html</code> — і відео з'явиться тут автоматично. Сам квест уже готовий ✨</p></div></div>
+            </div>
+            <p class="under-video" id="videoStatus">Звук краще увімкнути, а світ — на кілька хвилин поставити на паузу.</p>
+            <div class="love-note">«Нехай у твоєму житті буде стільки щастя, скільки зірок на небі. А поруч завжди буде хтось, хто нагадуватиме, яка ти неймовірна»</div>
+            <button class="secondary" id="restartBtn">↻ Пройти квест ще раз</button>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><span>маленька пригода <b>✦</b> велике почуття</span><span>зроблено з любов'ю, не на заводі 💌</span></footer>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+  // Налаштування: за бажанням зміни текст нижче під свою історію.
+  const CONFIG = { herName: "кохана" };
+
+  const $ = (id) => document.getElementById(id);
+  $('herNameDisplay').textContent = CONFIG.herName || 'тебе';
+  const views = ['welcome','quest'];
+  let foundHearts = 0;
+  let currentStep = 1;
+  let toastTimer;
+
+  $('startBtn').addEventListener('click', () => {
+    $('welcome').classList.remove('active');
+    $('quest').classList.add('active');
+    window.scrollTo({top:0,behavior:'smooth'});
+    createHearts();
+  });
+
+  function createHearts(){
+    const field = $('heartField');
+    field.innerHTML = '';
+    foundHearts = 0;
+    $('heartCount').textContent = '0';
+    const positions = [
+      {left:'10%',top:'18%'},{left:'38%',top:'58%'},{left:'62%',top:'16%'},{left:'78%',top:'56%'},{left:'48%',top:'31%'}
+    ];
+    positions.forEach((pos,i)=>{
+      const heart = document.createElement('button');
+      heart.type = 'button'; heart.className = 'star-heart'; heart.textContent = '♡';
+      heart.setAttribute('aria-label',`Знайти сердечко ${i+1}`);
+      Object.assign(heart.style,pos);
+      heart.style.animationDelay = `${-(i*.45)}s`;
+      heart.addEventListener('click',()=>{
+        if(heart.classList.contains('found')) return;
+        heart.classList.add('found'); heart.textContent = '♥'; foundHearts++;
+        $('heartCount').textContent = String(foundHearts);
+        if(foundHearts===5){
+          $('heartHint').textContent = 'Усі п’ять на місці! Ти уважніша, ніж здавалося зіркам ✨';
+          markDone(1); showToast('Сердечка зібрано! Відкриваємо наступний крок 💗');
+          setTimeout(()=>showStep(2),700);
+        }
+      });
+      field.appendChild(heart);
+    });
+  }
+
+  function showStep(n){
+    currentStep=n;
+    document.querySelectorAll('.step-view').forEach(el=>el.classList.add('hidden'));
+    $(`step${n}`).classList.remove('hidden');
+    document.querySelectorAll('#stepList li').forEach((li,i)=>{
+      li.classList.toggle('current',i+1===n);
+      if(i+1<n) li.classList.add('done'); else li.classList.remove('done');
+      li.querySelector('.step-num').textContent = i+1<n ? '✓' : `0${i+1}`;
+    });
+    $('progressText').textContent = `${n-1} з 3`;
+    $('progressFill').style.width = `${((n-1)/3)*100}%`;
+    if(n===4){
+      $('progressText').textContent='3 з 3'; $('progressFill').style.width='100%';
+      document.querySelectorAll('#stepList li').forEach(li=>{li.classList.remove('current');li.classList.add('done');li.querySelector('.step-num').textContent='✓'});
+      $('videoPlaceholder').classList.remove('hidden'); $('birthdayVideo').classList.add('hidden');
+      $('birthdayVideo').load();
+      setTimeout(()=>{
+        const v=$('birthdayVideo');
+        if(v.readyState>0 && v.networkState!==v.NETWORK_NO_SOURCE){
+          $('videoPlaceholder').classList.add('hidden');v.classList.remove('hidden');
+          $('videoStatus').textContent='Звук краще увімкнути, а світ — на кілька хвилин поставити на паузу.';
+        }
+      },500);
+      launchConfetti();
+    }
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  function markDone(n){
+    const li=document.querySelectorAll('#stepList li')[n-1];
+    if(li){li.classList.add('done');li.classList.remove('current');li.querySelector('.step-num').textContent='✓'}
+  }
+  document.querySelectorAll('.choice').forEach(btn=>btn.addEventListener('click',()=>{
+    const feedback=$('choiceFeedback');
+    document.querySelectorAll('.choice').forEach(b=>b.classList.remove('correct','wrong'));
+    if(btn.dataset.correct==='true'){
+      btn.classList.add('correct');feedback.textContent='Саме так. Найцінніше — це любов і люди, які роблять тебе щасливою. 💗';
+      markDone(2);setTimeout(()=>showStep(3),1000);
+    }else{
+      btn.classList.add('wrong');feedback.textContent='Гарна спроба 😌 Але подумай, що справді робить подарунок особливим.';
+    }
+  }));
+  $('answerForm').addEventListener('submit',(e)=>{
+    e.preventDefault();const answer=$('secretAnswer').value.trim().toLocaleLowerCase('uk-UA').replace(/[.!?,’']/g,'');
+    const accepted=['любов','кохання','любовь','love','любити'];
+    if(accepted.includes(answer)){
+      $('riddleFeedback').textContent='Пароль прийнято. Найцінніше розгадано. Твій сюрприз уже чекає… 💌';
+      markDone(3);setTimeout(()=>showStep(4),1100);
+    }else{
+      $('riddleFeedback').textContent='Не зовсім те слово. Спробуй ще раз — відповідь ближче, ніж здається ✨';
+      $('secretAnswer').focus();
+    }
+  });
+  $('birthdayVideo').addEventListener('loadedmetadata',()=>{
+    $('birthdayVideo').classList.remove('hidden');$('videoPlaceholder').classList.add('hidden');
+  });
+  $('birthdayVideo').addEventListener('error',()=>{
+    if(currentStep===4){$('birthdayVideo').classList.add('hidden');$('videoPlaceholder').classList.remove('hidden');}
+  });
+  $('restartBtn').addEventListener('click',()=>{
+    foundHearts=0;currentStep=1;
+    $('quest').classList.remove('active');$('welcome').classList.add('active');
+    $('progressText').textContent='0 з 3';$('progressFill').style.width='0%';
+    document.querySelectorAll('#stepList li').forEach((li,i)=>{li.classList.toggle('current',i===0);li.classList.remove('done');li.querySelector('.step-num').textContent=`0${i+1}`});
+    $('choiceFeedback').textContent='';$('riddleFeedback').textContent='';$('secretAnswer').value='';
+    document.querySelectorAll('.choice').forEach(b=>b.classList.remove('correct','wrong'));
+    createHearts();window.scrollTo({top:0,behavior:'smooth'});
+  });
+  function showToast(message){const t=$('toast');t.textContent=message;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),2200)}
+  function launchConfetti(){
+    const symbols=['♡','✦','✨','💗','✧'];
+    for(let i=0;i<42;i++){
+      const el=document.createElement('span');el.className='confetti';el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+      el.style.left=`${Math.random()*100}vw`;el.style.setProperty('--dur',`${2.5+Math.random()*3.5}s`);el.style.setProperty('--drift',`${Math.random()*180-90}px`);el.style.setProperty('--size',`${12+Math.random()*16}px`);el.style.animationDelay=`${Math.random()*.9}s`;
+      document.body.appendChild(el);setTimeout(()=>el.remove(),7000);
+    }
+  }
+</script>
+</body>
+</html>
